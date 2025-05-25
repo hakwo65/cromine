@@ -1,25 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Simple Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Cromine Game</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .games-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .game-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffffff33;
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: scale(1.03);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .game-card h2 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .game-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #00bcd4;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        @media (min-width: 600px) {
+            .games-container {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .game-card {
+                width: 250px;
+            }
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; color: #333; text-align: center; padding: 50px;">
+<body>
 
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple website made with only HTML.</p>
+    <header>
+        <h1>Welcome to Cromine Game</h1>
+        <p>Enjoy exciting games like Car Racing and Bubble Blast!</p>
+    </header>
 
-    <hr style="margin: 40px 0;">
-
-    <h2>About Me</h2>
-    <p>Hello! I'm learning how to make websites using HTML and host them on GitHub Pages.</p>
-
-    <h2>Contact</h2>
-    <p>Email: yourname@example.com</p>
-
-    <footer style="margin-top: 50px; color: #777;">
-        <p>&copy; 2025 My Simple Website</p>
-    </footer>
+    <section class="games-container">
+        <div class="game-card">
+            <h2>Car Racing</h2>
+            <a href="car-racing.html">Play Now</a>
+        </div>
+        <div class="game-card">
+            <h2>Bubble Blast</h2>
+            <a href="bubble-blast.html">Play Now</a>
+        </div>
+    </section>
 
 </body>
 </html>
