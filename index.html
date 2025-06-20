@@ -3,91 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Cromine Game</title>
+    <title>Cromine Games - Reward Distribution</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-            color: #fff;
-            text-align: center;
         }
-
-        header {
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
         }
-
+        
+        header {
+            background-color: #10a37f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 30px;
+        }
+        
         h1 {
-            font-size: 2.5em;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
-
-        .games-container {
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .reward-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+        
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            padding: 30px;
+            align-items: center;
         }
-
-        .game-card {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid #ffffff33;
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.3s ease;
+        
+        .game-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
-
-        .game-card:hover {
-            transform: scale(1.03);
-            background-color: rgba(255, 255, 255, 0.2);
+        
+        h2 {
+            color: #10a37f;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
         }
-
-        .game-card h2 {
-            margin: 0;
-            font-size: 1.8em;
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
         }
-
-        .game-card a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #00bcd4;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f0f0f0;
             font-weight: bold;
         }
-
-        @media (min-width: 600px) {
-            .games-container {
-                flex-direction: row;
-                justify-content: center;
+        
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .separator {
+            border-bottom: 2px solid #10a37f;
+            margin: 15px 0;
+        }
+        
+        .cta {
+            background-color: #10a37f;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        .cta:hover {
+            background-color: #0d8a6d;
+        }
+        
+        .description {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            line-height: 1.7;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
             }
-
-            .game-card {
-                width: 250px;
+            
+            .reward-section, .image-section {
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Welcome to Cromine Game</h1>
-        <p>Enjoy exciting games like Car Racing and Bubble Blast!</p>
-    </header>
-
-    <section class="games-container">
-        <div class="game-card">
-            <h2>Car Racing</h2>
-            <a href="car-racing.html">Play Now</a>
+    <div class="container">
+        <header>
+            <h1>Cromine Games</h1>
+            <p class="subtitle">Exciting Rewards for Top Performers</p>
+        </header>
+        
+        <div class="content">
+            <div class="reward-section">
+                <h2>Final Reward Distribution</h2>
+                
+                <table>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Reward</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="separator"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>---</td>
+                        <td>₹50,000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>---</td>
+                        <td>₹10,000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>---</td>
+                        <td>₹8,889</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>---</td>
+                        <td>₹7,778</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>---</td>
+                        <td>₹6,667</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>---</td>
+                        <td>₹5,556</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>---</td>
+                        <td>₹4,444</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>---</td>
+                        <td>₹3,333</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>---</td>
+                        <td>₹2,222</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>---</td>
+                        <td>₹1,111</td>
+                    </tr>
+                </table>
+                
+                <div class="description">
+                    <p>Top 10 best player Congratulations to all our winners! The Cromine Games tournament was fiercely competitive, with players showcasing exceptional skills and strategy.</p>
+                    <p>We're proud to reward our top performers with these cash prizes. Stay tuned for our next tournament with even bigger rewards!</p>
+                </div>
+                
+                <button class="cta">Automate</button>
+            </div>
+            
+            <div class="image-section">
+                <img src="game.jpg" alt="Cromine Game Screenshot" class="game-image">
+                <div class="description">
+                    <h3>About Cromine Games</h3>
+                    <p>Cromine Games is an exciting gaming platform that hosts competitive tournaments with real real users. Our games test strategy, skill, and quick thinking.</p>
+                    <p>Join thousands of players competing daily for the chance to win big rewards and establish yourself as a top player in our community.</p>
+                </div>
+            </div>
         </div>
-        <div class="game-card">
-            <h2>Bubble Blast</h2>
-            <a href="bubble-blast.html">Play Now</a>
-        </div>
-    </section>
-
+        
+        <footer>
+            <p>&copy; 2025 Cromine Games. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
